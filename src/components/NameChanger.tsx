@@ -1,6 +1,11 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 const NameChanger = () => {
     const [name, setName] = useState("")
+
+    useEffect(() => {
+        document.title = name ? `Hello, ${name}!` : "Hello, Stranger"
+    }, [name]);
+
     const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value)
     }
