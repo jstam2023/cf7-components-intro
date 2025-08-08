@@ -6,7 +6,7 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import ArrowFunctionalComponent from "./components/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/ArrowFunctionalComponentWithProps.tsx";
 // import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
-import Layout from "./components/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
@@ -21,6 +21,13 @@ import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import Todo from "./components/Todo/Todo.tsx"
 import UserPage from "./pages/UserPage.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
+import ExamplesPage from "./pages/ExamplesPage.tsx";
+import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
+// import AutoRedirect from "./components/AutoRedirect.tsx";
+// import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
+import AutoRedirectAdvanced from "./components/AutoRedirectAdvanced.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 function App() {
 
@@ -53,19 +60,29 @@ function App() {
 
 
         <BrowserRouter>
-            <Layout>
+            {/*<Layout>*/}
                 <Routes>
                     {/*<Route path="/" element={<HomePage />} />*/}
-                    <Route index element={<HomePage />} />
 
-                    <Route path="examples">
+                    <Route element={<RouterLayout />}>
+                        <Route index element={<HomePage />} />
+                    </Route>
+
+                    <Route path="examples" element={<RouterExamplesLayout/>}>
+                        <Route index element={<ExamplesPage/>}/>
                         <Route path="name-changer" element={<NameChangerPage />}/>
                         <Route path="online-status" element={<OnlineStatusPage />}/>
+                        <Route path="auto-redirect" element={<AutoRedirectAdvanced/>}/>
                     </Route>
                     <Route path="users/:userId" element={<UserPage />}/>
+                    <Route path="users" element={<UserPage />}/>
+                    {/*<Route path="files/*" element={<FilePage/>}/>*/}
+                    {/*PATH: https://example.comm/users/125/name/tom*/}
+                    {/*QUERY: https://example.com/user?id=125&name=Tom*/}
 
+                    <Route path="*" element={<NotFoundPage/>}/>
                 </Routes>
-            </Layout>
+            {/*</Layout>*/}
         </BrowserRouter>
 
     </>
