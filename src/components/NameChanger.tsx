@@ -19,7 +19,7 @@ const NameChanger = () => {
 
     return (
         <>
-            <h1 className="text-center text-xl pt-4">Hello, {name || "Stranger"}</h1>
+            <h1 className="text-center text-xl pt-24">Hello, {name || "Stranger"}</h1>
             <div className="text-center mt-4">
                 <input
                     type="text"
