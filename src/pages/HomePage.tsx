@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 
-const HoePage = () => {
+const HomePage = () => {
 
     useEffect(() => {
         document.title = "homePage";
@@ -13,4 +13,4 @@ const HoePage = () => {
     )
 }
 
-export default HoePage;
+export default HomePage;
