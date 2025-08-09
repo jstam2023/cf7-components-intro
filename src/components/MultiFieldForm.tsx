@@ -62,9 +62,10 @@ const MultiFieldForm = () => {
                     <div>
                     <textarea
                         name="message"
+                        maxLength={100}
                         value={values.message}
                         onChange={handleChange}
-                        placeholder="Type your message"
+                        placeholder="Type your message max characters: 100"
                         className="w-full px-4 py-2 rounded border"
                         required
                     ></textarea>
