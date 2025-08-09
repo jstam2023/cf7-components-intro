@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from "react-router";
-import HomePage from "./pages/HomePage.tsx";
+// import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import ClassComponent from "./components/ClassComponent.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
@@ -28,7 +28,9 @@ import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 // import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import AutoRedirectAdvanced from "./components/AutoRedirectAdvanced.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
-import FocusInput from "./components/FocusInput.tsx";
+// import FocusInput from "./components/FocusInput.tsx";
+// import UnControlledInput from "./components/UnControlledInput.tsx";
+import MultiFieldForm from "./components/MultiFieldForm.tsx";
 
 function App() {
 
@@ -67,7 +69,9 @@ function App() {
 
                     <Route element={<RouterLayout />}>
                         {/*<Route index element={<HomePage />}/>*/}
-                        <Route index element={<FocusInput />}/>
+                        {/*<Route index element={<FocusInput />}/>*/}
+                        {/*<Route index element={<UnControlledInput />}/>*/}
+                        <Route index element={<MultiFieldForm />}/>
 
                     </Route>
 
