@@ -35,6 +35,36 @@ import NotFoundPage from "./pages/NotFoundPage.tsx";
 import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
 
 function App() {
+    //
+    // const url:string = "/api/v1/products";
+    //
+    // fetch(url, {
+    //     method: "POST",
+    //     headers: {'Content-Type': 'application/json'},
+    //     body: JSON.stringify(payload),  //POST,PUT,PATCH
+    // }
+    // )
+    //     .then(res => {
+    //         if (!res.ok) throw new Error(res.statusText);
+    //         return res.json();
+    //     })
+    //     .then(data => {})
+    //     .catch(err => {});
+    //
+    // async function fetchData(url, method="GET", payload = null){
+    //     try {
+    //         const options = {
+    //             method,
+    //             headers: {'Content-Type': 'application/json'},
+    //         };
+    //         if(payload) options.body = JSON.stringify(payload);
+    //         const res = await fetch(url, options)
+    //         if (!res.ok) throw new Error(res.statusText);
+    //         return await res.json();
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
 
   return (
     <>
