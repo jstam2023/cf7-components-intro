@@ -16,7 +16,6 @@ const NameChanger = () => {
         setName(e.target.value)
     }
 
-
     return (
         <>
             <h1 className="text-center text-xl pt-24">Hello, {name || "Stranger"}</h1>
