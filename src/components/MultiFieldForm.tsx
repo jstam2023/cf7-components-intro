@@ -42,6 +42,7 @@ const MultiFieldForm = () => {
                         type="text"
                         name="name"
                         minLength={3}
+                        maxLength={15}
                         value={values.name}
                         placeholder="name"
                         onChange={handleChange}
@@ -52,6 +53,7 @@ const MultiFieldForm = () => {
                         <input
                             type="email"
                             name="email"
+                            maxLength={30}
                             value={values.email}
                             placeholder="email"
                             onChange={handleChange}
