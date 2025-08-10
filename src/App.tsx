@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router";
 // import HomePage from "./pages/HomePage.tsx";
-import NameChangerPage from "./pages/NameChangerPage.tsx";
+// import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import ClassComponent from "./components/ClassComponent.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
 // import ArrowFunctionalComponent from "./components/ArrowFunctionalComponent.tsx";
@@ -8,7 +8,7 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
 // import Layout from "./components/Layout.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
-import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
+// import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
@@ -20,19 +20,22 @@ import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import Todo from "./components/Todo/Todo.tsx"
-import UserPage from "./pages/UserPage.tsx";
-import RouterLayout from "./components/RouterLayout.tsx";
-import ExamplesPage from "./pages/ExamplesPage.tsx";
-import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
+// import UserPage from "./pages/UserPage.tsx";
+// import RouterLayout from "./components/RouterLayout.tsx";
+// import ExamplesPage from "./pages/ExamplesPage.tsx";
+// import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 // import AutoRedirect from "./components/AutoRedirect.tsx";
 // import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
-import AutoRedirectAdvanced from "./components/AutoRedirectAdvanced.tsx";
+// import AutoRedirectAdvanced from "./components/AutoRedirectAdvanced.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+import RouterLayout from "@/components/RouterLayout.tsx";
+import ProductList from "@/pages/ProductList.tsx";
+import Product from "@/pages/Product.tsx"
 // import FocusInput from "./components/FocusInput.tsx";
 // import UnControlledInput from "./components/UnControlledInput.tsx";
 // import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
-import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
+// import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
 
 function App() {
     //
@@ -99,25 +102,31 @@ function App() {
                 <Routes>
                     {/*<Route path="/" element={<HomePage />} />*/}
 
-                    <Route element={<RouterLayout />}>
-                        {/*<Route index element={<HomePage />}/>*/}
-                        {/*<Route index element={<FocusInput />}/>*/}
-                        {/*<Route index element={<UnControlledInput />}/>*/}
-                        <Route index element={<MultiFieldFormWithReactHook />}/>
+                    {/*<Route element={<RouterLayout />}>*/}
+                    {/*    /!*<Route index element={<HomePage />}/>*!/*/}
+                    {/*    /!*<Route index element={<FocusInput />}/>*!/*/}
+                    {/*    /!*<Route index element={<UnControlledInput />}/>*!/*/}
+                    {/*    <Route index element={<MultiFieldFormWithReactHook />}/>*/}
 
-                    </Route>
+                    {/*</Route>*/}
 
-                    <Route path="examples" element={<RouterExamplesLayout/>}>
-                        <Route index element={<ExamplesPage/>}/>
-                        <Route path="name-changer" element={<NameChangerPage />}/>
-                        <Route path="online-status" element={<OnlineStatusPage />}/>
-                        <Route path="auto-redirect" element={<AutoRedirectAdvanced/>}/>
-                    </Route>
-                    <Route path="users/:userId" element={<UserPage />}/>
-                    <Route path="users" element={<UserPage />}/>
+                    {/*<Route path="examples" element={<RouterExamplesLayout/>}>*/}
+                    {/*    <Route index element={<ExamplesPage/>}/>*/}
+                    {/*    <Route path="name-changer" element={<NameChangerPage />}/>*/}
+                    {/*    <Route path="online-status" element={<OnlineStatusPage />}/>*/}
+                    {/*    <Route path="auto-redirect" element={<AutoRedirectAdvanced/>}/>*/}
+                    {/*</Route>*/}
+                    {/*<Route path="users/:userId" element={<UserPage />}/>*/}
+                    {/*<Route path="users" element={<UserPage />}/>*/}
                     {/*<Route path="files/*" element={<FilePage/>}/>*/}
                     {/*PATH: https://example.comm/users/125/name/tom*/}
                     {/*QUERY: https://example.com/user?id=125&name=Tom*/}
+
+                    <Route path="products" element={<RouterLayout />} />
+                    <Route index element={<ProductList />}/>
+                    {/*<Route path="new" element={<Product />} />*/}
+                    {/*<Route path=":productId" element={<Product/>}/>*/}
+                    <Route path=":productId" element={<Product/>}/>
 
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Routes>

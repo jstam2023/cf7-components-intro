@@ -3,6 +3,7 @@ import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 
+
 const formSchema = z.object({
     name: z.string().trim().nonempty("Name is required.").min(2, "Name must be more than one character"),
     email: z
@@ -100,6 +101,7 @@ const MultiFieldFormWithReactHook = () => {
                         >
                             Clear
                         </button>
+
                     </div>
                         <div className="mt-6 border-t pt-4 space-y-2">
                             <h2 className="font-semibold">Live Data</h2>
